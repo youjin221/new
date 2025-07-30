@@ -1,6 +1,5 @@
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
-
+const itemImage = new Image();
+itemImage.src = "h.c.jpeg";
 const scoreDisplay = document.getElementById("score");
 const gameOverDisplay = document.getElementById("gameOver");
 
@@ -35,20 +34,7 @@ function createHeart() {
 }
 
 function drawHeart(heart) {
-  ctx.fillStyle = "hotpink";
-  ctx.beginPath();
-  ctx.moveTo(heart.x + heart.size / 2, heart.y + heart.size / 4);
-  ctx.bezierCurveTo(
-    heart.x + heart.size * 1.5, heart.y - heart.size / 2,
-    heart.x + heart.size * 1.5, heart.y + heart.size * 1.5,
-    heart.x + heart.size / 2, heart.y + heart.size
-  );
-  ctx.bezierCurveTo(
-    heart.x - heart.size * 0.5, heart.y + heart.size * 1.5,
-    heart.x - heart.size * 0.5, heart.y - heart.size / 2,
-    heart.x + heart.size / 2, heart.y + heart.size / 4
-  );
-  ctx.fill();
+  ctx.drawImage(itemImage, heart.x, heart.y, heart.size, heart.size);
 }
 
 function updateScore() {
