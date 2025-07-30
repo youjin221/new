@@ -1,5 +1,5 @@
 const itemImage = new Image();
-itemImage.src = "hcjpeg";
+itemImage.src = "h.c.jpeg";
 
 itemImage.onload = () => {
   update(); // 이미지가 로드된 후에 게임 시작
