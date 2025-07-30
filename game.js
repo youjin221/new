@@ -1,5 +1,12 @@
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
 const itemImage = new Image();
 itemImage.src = "heart.jpeg";
+
+itemImage.onload = () => {
+  update(); // 이미지가 로드된 후에 게임 시작
+};
 
 itemImage.onload = () => {
   update(); // 이미지가 로드된 후에 게임 시작
